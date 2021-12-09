@@ -40,18 +40,3 @@ fun main() {
     println(part1(input))
     println(part2(input))
 }
-
-private fun <T> List<T>.rollingWindow(windowSize: Int): List<List<T>> {
-    val list = mutableListOf<List<T>>()
-    this.forEachIndexed { index, item ->
-        if (this.size >= index + windowSize) {
-            val window = mutableListOf<T>()
-            window.add(item)
-            for (n in 1 until windowSize) {
-                window.add(this[index + n])
-            }
-            list.add(window)
-        }
-    }
-    return list
-}
