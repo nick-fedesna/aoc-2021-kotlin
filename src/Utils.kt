@@ -24,3 +24,7 @@ fun <T> List<T>.rollingWindow(windowSize: Int): List<List<T>> {
     }
     return list
 }
+
+fun List<String>.assertAllStringsSameLength() {
+    check(map { it.length }.distinct().count() == 1)
+}
