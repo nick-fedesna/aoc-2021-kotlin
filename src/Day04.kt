@@ -140,6 +140,3 @@ fun main() {
     println("part1: ${part1(input)}")
     println("part2: ${part2(input)}")
 }
-
-
-
